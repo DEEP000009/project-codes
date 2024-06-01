@@ -1,0 +1,22 @@
+#define ENCA 2
+#define ENCB 3
+int pos = 0;
+void setup() {
+  Serial.begin(9600);
+  pinMode(ENCA, INPUT);
+  pinMode(ENCB, INPUT);
+  attachInterrupt(digitalPinToInterrupt(ENCA),readencoder,RISING);
+}
+
+void loop() {
+  Serial.println(pos);
+}
+void readencoder(){
+  int b = digitalRead(ENCB);
+  if (b>0){
+    pos++;
+  }
+else {
+    pos--;
+  }
+}
