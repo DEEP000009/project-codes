@@ -1,0 +1,19 @@
+# with open("example.txt","r") as variable:  [used to open a file and does not have to worry about using file.close() everytime]
+with open("C:\\Users\\ASUS\\projects\\python\\abc.txt","r") as file:
+    f = file.readlines()
+store = []
+for line in f:
+    if line.endswith("\n"):  #endswith is used to read the end part of a string endswith(condition to read)
+        store.append(line[:-1])
+    else:
+        store.append(line)
+print(store)
+with open("C:\\Users\\ASUS\\projects\\python\\abc.txt","a") as write: #here a = append i.e, it does not delete the previous data from the text
+    write.write("\nramesh")
+with open("C:\\Users\\ASUS\\projects\\python\\abc.txt","r") as file:
+    w = file.readlines()
+for x in w:
+    if not x.endswith("\n"):
+        store.append(x)
+print(store)
+#here 
