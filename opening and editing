@@ -16,4 +16,5 @@ for x in w:
     if not x.endswith("\n"):
         store.append(x)
 print(store)
-#here 
+#here the txt.endswith() that we are using have multiple uses like checking that the string is ending with certain something we want it to end.
+#also one of its use is ex: txt.endswith("lo",0,5) lets say *txt = "Hello!! world"* here it reads the text till 5th letter and see if it end with "lo" from 0-5.
