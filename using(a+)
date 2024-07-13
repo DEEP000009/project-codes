@@ -1,0 +1,11 @@
+with open("C:\\Users\\ASUS\\projects\\python\\abc.txt","a+") as file:
+    file.write("\ndanny")
+    file.seek(0) #move the pointer to the start as a+ puts the pointer in the end
+    f = file.readlines()
+store=[]
+for line in f:
+    if line.endswith("\n"):
+        store.append(line[:-1])
+    else:
+        store.append(line)
+print(store)
